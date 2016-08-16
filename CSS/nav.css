@@ -1,0 +1,353 @@
+/* Desktop/Large Screen interface */
+@media (min-width: 1080px) {
+    nav {
+        background-color: white;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100px;
+        top: 0;
+        left: 0;
+        -webkit-box-shadow: 0 0 5px black;
+        -moz-box-shadow: 0 0 5px black;
+        box-shadow: 0 0 5px black;
+    }
+    #navHolder {
+        display: block;
+        padding: 0;
+        height: 100%;
+        max-width: 1080px;
+        min-width: 240px;
+        margin: 0 auto;
+    }
+    #mainHeaderImage {
+        color: transparent;
+        padding: 0 5px 0 0;
+        margin: 10px 10px 10px 10px;
+        float: left;
+        height: 80px;
+        width: 200px;
+        background: url("../IMG/logolong.svg") no-repeat;
+        background-size: contain;
+        border-right: 1px solid lightgray;
+    }
+    #navContainer {
+        list-style-type: none;
+        display: block;
+        margin: 0;
+        padding: 0;
+        float: left;
+        height: 100%;
+        width: auto;
+    }
+    .navItem {
+        display: inline-block;
+        margin: 30px 0;
+        height: 40px;
+        width: auto;
+    }
+    .navButton {
+        display: block;
+        padding: 0 15px;
+        margin: 0;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        text-decoration: none;
+        color: #646464;
+        box-sizing: border-box;
+        font-size: 11pt;
+        transition: all linear 0.2s;
+        border-radius: 3px;
+    }
+    .navButton>span {
+        position: relative;
+        top: 10px;
+    }
+
+    /*Drop Down Menu Styles */
+    .navDropDownHolder {
+        display: block;
+        padding: 0;
+        height: 100%;
+        max-width: 720px;
+        min-width: 240px;
+        margin: 0 auto;
+    }
+    .navDropDown {
+        padding: 0;
+        margin: 0;
+        display: block;
+        background-color: whitesmoke;
+        position: absolute;
+        width: 100%;
+        height: 50px;
+        top: 100px;
+        left: 0;
+        z-index: -1;
+        -webkit-box-shadow: 0 0 5px black;
+        -moz-box-shadow: 0 0 5px black;
+        box-shadow: 0 0 5px black;
+        transition: all ease-out 0.15s;
+    }
+
+    .navDropDownHolder > span {
+        display: inline-block;
+        position: relative;
+        height: 100%;
+        box-sizing: border-box;
+        width: auto;
+        padding: 15px 15px;
+        font-size: 11pt;
+        color: #5b5b5b;
+        border-right: 1px solid #c7c7c7;
+        border-left: 1px solid #c7c7c7;
+    }
+
+    .navDropItem {
+        display: inline-block;
+        margin: 0 7px 0 0;
+        padding: 10px 0;
+        height: 100%;
+        width: auto;
+        box-sizing: border-box;
+    }
+
+    .navDropButton {
+        display: block;
+        padding: 5px;
+        margin: 0 5px;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        text-decoration: none;
+        color: #646464;
+        box-sizing: border-box;
+        font-size: 11pt;
+        transition: all linear 0.2s;
+        border-radius: 3px;
+    }
+
+    .navDropDownHidden {
+        top: 45px;
+    }
+
+    .mobileOnly {
+        display: none;
+    }
+}
+@media (max-width: 1080px) {
+    nav {
+        background-color: white;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 50px;
+        border-bottom: 1px solid rgb(0, 62, 126);
+    }
+    #navHolder {
+        display: block;
+        padding: 0;
+        height: 100%;
+        max-width: 1080px;
+        min-width: 240px;
+        margin: 0 auto;
+    }
+    #mainHeaderImage {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 0;
+        padding: 0;
+        text-align: center;
+        margin: 5px 0;
+        float: left;
+        height: 40px;
+        width: 100%;
+        background: url("../IMG/camhigh.svg") no-repeat 5px 0;
+        background-size: contain;
+    }
+    #mainHeaderImage>span {
+        font-size: 22pt;
+        color: rgb(0, 62, 126);
+        position: relative;
+        top: 0;
+    }
+    .menuButton {
+        z-index: 1;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 40px;
+        height: 40px;
+        margin: 5px;
+        padding: 0;
+        border: 1px solid rgb(150, 150, 150);
+        border-radius: 7px;
+        cursor: pointer;
+        /*noinspection CssOverwrittenProperties*/
+        background-image: url(CSSIMG/menuIcon.png);
+        /*noinspection CssOverwrittenProperties*/
+        background-image: url(CSSIMG/menuIcon.svg), none;
+        background-size: 35px 30px;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    .menuButtonToggled {
+        background-color: rgb(200, 200, 200);
+        -webkit-box-shadow: inset 0 0 5px rgb(100, 100, 100);
+        -moz-box-shadow: inset 0 0 5px rgb(100, 100, 100);
+        box-shadow: inset 0 0 5px rgb(100, 100, 100);
+    }
+    #navContainer {
+        list-style-type: none;
+        position:relative;
+        top: 50px;
+        margin: 0;
+        padding: 0;
+        float: left;
+        height: auto;
+        width: 100%;
+        background: #f5f5f5;
+        border-bottom: 1px solid rgb(0, 62, 126);
+        border-top: 1px solid rgb(0, 62, 126);
+    }
+    .navContainerToggled {
+        display: none;
+    }
+    .navItem {
+        display: block;
+        margin: 0;
+        min-height: 45px;
+        height: auto;
+        width: 100%;
+    }
+    .navButton {
+        display: block;
+        padding: 0 15px;
+        margin: 0;
+        width: 100%;
+        min-height: 45px;
+        height: 100%;
+        text-align: center;
+        text-decoration: none;
+        color: #646464;
+        box-sizing: border-box;
+        font-size: 11pt;
+    }
+    .navButton>span {
+        position: relative;
+        top: 12px;
+    }
+
+    /*Drop Down Menu Styles */
+    .navDropDownHolder {
+        display: block;
+        padding: 0;
+        height: 100%;
+        width: 100%;
+        margin: 0;
+        z-index: 10;
+    }
+    .navDropDown {
+        padding: 0;
+        margin: 5px auto;
+        display: block;
+        background-color: whitesmoke;
+        width: 95%;
+        height: auto;
+        -webkit-box-shadow: 0 0 5px black;
+        -moz-box-shadow: 0 0 5px black;
+        box-shadow: 0 0 5px black;
+    }
+
+    .navDropDownHolder > span {
+        display: none;
+    }
+
+    .navDropItem {
+        display: block;
+        margin: 0;
+        padding: 0;
+        height: 45px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .navDropButton {
+        display: block;
+        padding: 12px;
+        margin: 0;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        text-decoration: none;
+        color: #646464;
+        box-sizing: border-box;
+        font-size: 11pt;
+    }
+
+    .navDropDownHidden {
+        display: none;
+    }
+}
+
+/*Common stuff */
+.navButton:hover {
+    background-color: #e3e3e3;
+}
+.navButton:active {
+    background-color: rgb(41, 88, 149);
+    color: white;
+}
+.navActive {
+    background-color: rgb(0, 62, 126);
+    color: white;
+}
+.navActive:hover {
+    background-color: rgb(41, 88, 149);
+    color: white;
+}
+
+.navDropActive {
+    background-color: rgb(0, 62, 126);
+    color: white;
+}
+
+.navDropButton:hover {
+    background-color: #e3e3e3;
+}
+
+.navDropButton:active {
+    background-color: rgb(41, 88, 149);
+    color: white;
+}
+.navDropActive:hover {
+    background-color: rgb(41, 88, 149);
+    color: white;
+}
+
+.navDropDownButton {
+    cursor: pointer;
+}
+
+.navExpandIcon {
+    float: left;
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    box-sizing: border-box;
+    opacity: 0.5;
+    /*noinspection CssOverwrittenProperties*/
+    background-image: url(CSSIMG/expandIcon.png);
+    /*noinspection CssOverwrittenProperties*/
+    background-image: url(CSSIMG/expandIcon.svg), none;
+    background-size: 24px 24px;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: opacity linear 0.2s;
+}
+#mainHeaderImage>span {
+    font-family: "Crimson Text", serif;
+    font-weight: lighter;
+}

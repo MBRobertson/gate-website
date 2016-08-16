@@ -1,0 +1,22 @@
+main {
+    display: block;
+    margin: 0 auto;
+    padding: 0 30px;
+    min-width: 240px;
+}
+h2 {
+    margin: 20px 0;
+    padding: 0;
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-weight: lighter;
+    font-size: 36pt;
+    color: #555555
+}
+
+@media (max-width: 760px) {
+    main {
+        padding: 0;
+    }
+}

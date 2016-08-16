@@ -1,0 +1,101 @@
+main {
+    display: block;
+    margin: 0 auto;
+    padding: 0 30px;
+    min-width: 240px;
+}
+h2 {
+    margin: 20px 0;
+    padding: 0;
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-weight: lighter;
+    font-size: 36pt;
+    color: #555555
+}
+#compList {
+    text-align: center;
+}
+.compBlock {
+    display: inline-block;
+    margin: 10px 10px;
+    padding: 5px;
+    text-align: left;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    background-color: whitesmoke;
+    border: 1px solid darkgrey;
+    width: 400px;
+    height: 150px;
+    position: relative;
+}
+.compName {
+    padding: 0;
+    margin: 10px 10px;
+    font-size: 14pt;
+    color: #343434
+}
+.compDesc {
+    margin: 0 5px 5px 5px;
+    font-weight: lighter;
+    font-size: 11pt;
+}
+.compEnter {
+    display: block;
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    padding: 5px 15px;
+    font-size: 9pt;
+    border-radius: 3px;
+    text-decoration: none;
+    /*
+    border: 1px solid #9f9f9f;
+    background-color: #dadada;
+    color: #3d3d3d;
+    */
+    border: 1px solid #000000;
+    background-color: #003e7e;
+    color: #ffffff;
+
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(50, 50, 50, 0.5);
+    z-index: 15;
+}
+
+.popup {
+    display: block;
+    width: 600px;
+    height: 400px;
+    background-color: white;
+    box-shadow: 2px 2px 7px black;
+    border-radius: 10px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 20;
+    transform: translate(-50%, -50%);
+}
+
+@media (max-width: 760px) {
+    main {
+        padding: 0;
+    }
+    .compBlock {
+        display: block;
+        margin: 10px 0;
+        padding: 5px 5px 30px 5px;
+        width: 100%;
+        height: auto;
+        min-height: 100px;
+    }
+}
