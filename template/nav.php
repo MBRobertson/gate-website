@@ -78,19 +78,19 @@ function draw_nav($arg, $app, $content)
                 <?php
                 $ROOT = "/";
                 nav_addButton("Home", $ROOT."index.php", $arg['page']);
-                nav_addDropDown("Programme", $arg['page'], function() use ($arg, $ROOT) {
-                    nav_addDropButton("Overview", $ROOT."programme/overview.php", $arg['subPage']);
-                    nav_addDropButton("Scholarship", "#", $arg['subPage']);
-                    nav_addDropButton("Competitions", $ROOT."programme/competitions.php", $arg['subPage']);
-                });
-                nav_addButton("Student Voice", $ROOT."studentvoice.php", $arg['page']);
+                //nav_addDropDown("Programme", $arg['page'], function() use ($arg, $ROOT) {
+                    nav_addButton("Overview", $ROOT."programme/overview.php", $arg['subPage']);
+                    //nav_addDropButton("Scholarship", "#", $arg['subPage']);
+                    //nav_addDropButton("Competitions", $ROOT."programme/competitions.php", $arg['subPage']);
+                //});
+                nav_addButton("Gifted Students", $ROOT."studentvoice.php", $arg['page']);
                 nav_addButton("Honors Board", $ROOT."honorsboard.php", $arg['page']);
                 nav_addDropDown("Contact Us", $arg['page'], function() use ($arg, $ROOT) {
                     nav_addDropButton("Email", $ROOT."contact/email.php", $arg['subPage']);
                     nav_addDropButton("Nominate", $ROOT."contact/nominate.php", $arg['subPage']);
-                    nav_addDropButton("Suggestion Box", "#", $arg['subPage']);
+                    //nav_addDropButton("Suggestion Box", "#", $arg['subPage']);
                 });
-                nav_addButton("Groups", "#", $arg['page']);
+                //nav_addButton("Groups", "#", $arg['page']);
                 nav_addButton("Further Reading", $ROOT."readings.php", $arg['page']);
                 ?>
             </ul>

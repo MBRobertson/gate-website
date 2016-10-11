@@ -15,13 +15,83 @@ p, li {
 }
 .featured-box {
     display: block;
-    max-width: 960px;
+    max-width: 720px;
     min-width: 300px;
     height: 500px;
-    margin: 10px auto;
+    margin: 30px auto;
     padding: 0;
     box-sizing: border-box;
     border: 1px solid rgb(110, 110, 110);
     background-color: white;
     border-radius: 3px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+}
+
+.image-box {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    border: 1px solid black;
+    margin: 0;
+    background: #8e8e8e;
+    transition: all ease-in-out 0.93s;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-size: cover;
+    background-position: center;
+}
+
+.image-box-post {
+    left: -100%;
+}
+.image-box-pre {
+    left: 100%;
+}
+
+.student-container {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 85px;
+    box-sizing: border-box;
+    background-color: rgba(0, 0, 0, 0.7);
+    transition: height ease-in-out 0.3s;
+}
+
+.image-box:hover>.student-container {
+    height: 95px;
+}
+
+.image-load {
+    background-color: rgba(20, 20, 20, 0.95);
+    color: white;
+    font-size: 32pt;
+    box-sizing: border-box;
+    text-align: center;
+    padding-top: 220px;
+}
+
+.student-name {
+    display: block;
+    width: 100%;
+    font-size: 23px;
+    margin: 0;
+    box-sizing: border-box;
+    padding: 5px 20px;
+    color: white;
+}
+
+.student-desc {
+    display: block;
+    width: 100%;
+    margin: 0;
+    box-sizing: border-box;
+    padding: 3px 30px;
+    color: white;
 }

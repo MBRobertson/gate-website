@@ -12,3 +12,4 @@ function draw_htmlhead($arg, $app, $content)
     <!-- Template End -->
     <?php
 }
+?>

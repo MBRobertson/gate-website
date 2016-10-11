@@ -8,7 +8,7 @@
     <body>
         <?php $app->template('nav', ['page'=>'home']); ?>
         <main>
-            <section class="featured-box">Image is going here</section>
+            <section class="featured-box"><div class="image-box image-load">Loading...</div></section>
             <p>
                 <span class="overclock">THE NATIONAL VISION is THE CAMBRIDGE HIGH SCHOOL VISION: </span>
                 <span>gifted and talented learners are recognised, valued, and empowered to develop their exceptional abilities and qualities through equitable access to differentiated and culturally responsive provisions.</span>
@@ -39,7 +39,81 @@
                     <li>underachieve.pa</li>
                 </ul>
             </p>
+            <script>
+            /* global $ */
             
+                function slide(contentFunc) {
+                    var oldBox = $('.image-box')
+                    var newBox = $('<div class="image-box image-box-pre"></div>').appendTo($('.featured-box'));
+                    //Do stuff with new box
+                    if (contentFunc) {
+                        contentFunc(newBox);
+                    }
+                    
+                    setTimeout(function() {
+                        oldBox.addClass('image-box-post');
+                        newBox.removeClass('image-box-pre');
+                        setTimeout(function() {
+                            oldBox.remove();
+                        }, 930);
+                    }, 10);
+                    
+                }
+                
+                function student(id, name, desc, pic) {
+                    //var i = $('<img class="student-img" src="/IMG/students/' + pic + '" alt="' + name + '"/>');
+                    var n = $('<h3 class="student-name">' + name + '</h3>');
+                    var d = $('<p class="student-desc">' + desc + '</p>');
+                    var c = $('<div class="student-container"></div>');
+                    
+                    c.append(n);
+                    c.append(d);
+                    
+                    slide(function(content) {
+                        //content.append(i);
+                        content.append(c);
+                        content.css("background-image", "url(/IMG/students/" + pic + ")");
+                        
+                        content.click(function() {
+                            document.location.href=("/studentvoice.php#" + id)
+                        });
+                    });
+                }
+                
+                var studentIndex = 0;
+                function switchStudent() {
+                    var s = students[studentIndex];
+                    student(s.id, s.name, s.desc, s.img);
+                    studentIndex++;
+                    if (studentIndex >= students.length) {
+                        studentIndex = 0;
+                    }
+                    var next = students[studentIndex];
+                    if (next.preload === undefined) {
+                        next.preload = new Image();
+                        next.preload.src = ("/IMG/students/" + students[studentIndex].img);
+                    }
+                }
+                
+                var SWITCH_INTERVAL = 3750;
+                var switcher;
+                var students;
+                
+                $(document).ready(function() {
+                    $.getJSON("RES/students.json", function(data) { 
+                        students = data.students;
+                        switchStudent();
+                        switcher = setInterval(switchStudent, SWITCH_INTERVAL);
+                    }).fail(function() { console.error("Failed to retrieve student data!") });
+                    
+                    /*$.getJSON("api/students.php", function(data) { 
+                        students = data;
+                        switchStudent();
+                        switcher = setInterval(switchStudent, SWITCH_INTERVAL);
+                    }).fail(function() { console.error("Failed to retrieve student data!") });*/
+                
+                });
+            </script>
         </main>
     </body>
 </html>

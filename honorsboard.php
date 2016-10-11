@@ -34,25 +34,7 @@
     <section class="honorsRow">
         <?php 
             award("Megan Hemming", "August 2014", "Scholarship in German");
-            award("Student Name", "10/03/2006", $loremIpsum); 
-        ?>
-    </section>
-    <section class="honorsRow">
-        <?php 
-            award("Student Name", "10/03/2006", $loremIpsum); 
-            award("Student Name", "10/03/2006", $loremIpsum); 
-        ?>
-    </section>
-    <section class="honorsRow">
-        <?php 
-            award("Student Name", "10/03/2006", $loremIpsum); 
-            award("Student Name", "10/03/2006", $loremIpsum); 
-        ?>
-    </section>
-    <section class="honorsRow">
-        <?php 
-            award("Student Name", "10/03/2006", $loremIpsum); 
-            award("Student Name", "10/03/2006", $loremIpsum); 
+            award("More Coming", "", "More students will be added as we recieve information about them"); 
         ?>
     </section>
 </main>

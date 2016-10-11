@@ -20,7 +20,7 @@
                     </article>
                     <?php
                 }
-                competition("Canon Eyecon Competition", "The Canon EYECON Photography and Film competition is the ultimate opportunity to develop your style, gain experience and showcase your talent to leading industry professionals.");
+                competition("Canon Eyecon Competition", "The Canon EYECON Photography and Film competition is the ultimate opportunity to develop your style and gain experience.");
                 for ($i = 0; $i < 19; $i++) {
                     competition("Competition Name", "This is a really neat competition that you could probably enter.");
                 }
@@ -29,11 +29,11 @@
             <!--TODO POPUP MODAL -->
             
         </main>
-        <section class="modal">
+        <!--<section class="modal">
             <section class="popup">
                     
             </section>
-        </section>
+        </section>-->
         
         <script>
             /* global $ */
