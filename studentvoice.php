@@ -8,7 +8,7 @@
     <link rel="stylesheet" type="text/css" href="/CSS/Pages/studentvoice.css">
 </head>
 <body>
-<?php $app->template('nav', ['page'=>'student voice']); ?>
+<?php $app->template('nav', ['page'=>'gifted students']); ?>
 <main>
     <!--<h2>Student Voice</h2>
     <p id="subInfo">Select a category to view student lists</p>-->
