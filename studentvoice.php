@@ -183,7 +183,7 @@
             }
         });
         
-        $.getJSON("RES/students.json", function(data) { 
+        $.getJSON("RES/students.php", function(data) { 
             students = data.students;
             populateStudents();
             
