@@ -35,8 +35,7 @@
                 <ul>
                     <li>belong to minority ethnic groups,</li>
                     <li>are English language learners,</li>
-                    <li>have special needs – learning and/or physical, for example,</li>
-                    <li>underachieve.pa</li>
+                    <li>have special needs – learning and/or physical</li>
                 </ul>
             </p>
             <script>
